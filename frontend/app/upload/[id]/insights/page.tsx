@@ -334,13 +334,13 @@ if (!loading && !dataset) {
 
           {/* 3. Action bar actions footer */}
           <div className="flex flex-col sm:flex-row justify-end items-center gap-3.5 border-t border-grey-100 pt-6 mt-4">
-            <button
+            {/* <button
               onClick={() => router.push('/upload')}
               className="border border-grey-200 hover:bg-grey-50 text-grey-800 font-bold py-2.5 px-6 rounded-full text-xs cursor-pointer shadow-2xs transition-colors flex items-center gap-1.5"
             >
               <ArrowLeftIcon />
               <span>Upload Another Dataset</span>
-            </button>
+            </button> */}
             <button
               onClick={handleChatWithData}
               className="bg-[#121317] hover:bg-grey-900 text-white font-bold py-2.5 px-8 rounded-full text-xs cursor-pointer shadow-sm hover:scale-[1.02] transition-transform flex items-center gap-1.5"
