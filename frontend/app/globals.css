@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #121317;
+  
+  --palette-grey-0: #FFFFFF;
+  --palette-grey-10: #F8F9FC;
+  --palette-grey-15: #F0F1F5;
+  --palette-grey-20: #EFF2F7;
+  --palette-grey-50: #E6EAF0;
+  --palette-grey-100: #E1E6EC;
+  --palette-grey-200: #CDD4DC;
+  --palette-grey-300: #B2BBC5;
+  --palette-grey-400: #B7BFD9;
+  --palette-grey-800: #45474D;
+  --palette-grey-900: #2F3034;
+  --palette-grey-1000: #212226;
+  --palette-grey-1100: #18191D;
+  --palette-grey-1200: #121317;
+
+  --font-bricolage-grotesque: "Bricolage Grotesque", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-manrope: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@theme {
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-mono: var(--font-manrope), monospace;
+  --color-grey-0: var(--palette-grey-0);
+  --color-grey-10: var(--palette-grey-10);
+  --color-grey-15: var(--palette-grey-15);
+  --color-grey-20: var(--palette-grey-20);
+  --color-grey-50: var(--palette-grey-50);
+  --color-grey-100: var(--palette-grey-100);
+  --color-grey-200: var(--palette-grey-200);
+  --color-grey-300: var(--palette-grey-300);
+  --color-grey-400: var(--palette-grey-400);
+  --color-grey-800: var(--palette-grey-800);
+  --color-grey-900: var(--palette-grey-900);
+  --color-grey-1000: var(--palette-grey-1000);
+  --color-grey-1100: var(--palette-grey-1100);
+  --color-grey-1200: var(--palette-grey-1200);
+}
+
+html {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-bricolage-grotesque), sans-serif;
+  font-weight: 800 !important;
+}
+
+.btn-curvy-fill {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff !important;
+  color: #121317 !important;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  isolation: isolate;
+}
+
+/* Black curvy fill wave */
+.btn-curvy-fill::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300%;
+  padding-bottom: 300%;
+  background-color: #121317;
+  border-radius: 50%;
+  transform: translate(-50%, 50%) scale(0);
+  transform-origin: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+}
+
+.btn-curvy-fill:hover::after {
+  transform: translate(-50%, 50%) scale(1);
+}
+
+.btn-curvy-fill:hover {
+  color: #ffffff !important;
+  border-color: #121317 !important;
+}
+
+
+
